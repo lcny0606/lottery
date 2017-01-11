@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/material/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script src="__PUBLIC__/material/js/materialize.min.js"></script>
+    <script src="__PUBLIC__/js/marquee.min.js"></script>
+    <script src="__PUBLIC__/js/neon_text.js"></script>
+</head>
+
+<body class="red accent-2">
+    <nav class="red darken-3 z-depth-4 card-panel" role="navigation" style="margin-top:0">
+        <div class="nav-wrapper container clearfix">
+            <ul id="marquee6" class="marquee">
+                <li><span class="author"> <span class="yellow-text accent-2 nav_top left">恭祝全体员工新春快乐! 恭祝全体员工新春快乐!恭祝全体员工新春快乐! 恭祝全体员工新春快乐!</span></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row lucky " >
+        <div class="col s8 m8 l8  squared card-panel red accent-2" style='box-shadow: none'>
+            <div id="lottery">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="lottery-unit lottery-unit-0">
+                            <img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                        <td class="lottery-unit lottery-unit-1"><img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                        <td class="lottery-unit lottery-unit-2"><img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lottery-unit lottery-unit-7"><img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                        <td>
+                            <button type="button" class='start'><img src="__PUBLIC__/images/member/lottery1.jpg" alt="" style='height:300px'></button>
+                        </td>
+                        <td class="lottery-unit lottery-unit-3"><img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lottery-unit lottery-unit-6"><img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                        <td class="lottery-unit lottery-unit-5"><img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                        <td class="lottery-unit lottery-unit-4"><img src="__PUBLIC__/images/empty.png">
+                            <div class="mask"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col s4 m4 l4 red darken-3 haved z-depth-2 card-panel" style='height:900px'>
+            <h3 class='yellow-text accent-2  center-align' style="font-weight:bold">获奖名单</h3>
+            <div class="row">
+                <ul class="collapsible popout collection" data-collapsible="accordion">
+                     <li>
+                        <div class="collapsible-header pic_4  "><i class="mdi-image-filter-drama"></i>特 等 奖<span class="new badge">1</span></div>
+                        <div class="col l12 s12 m12 prize z-depth-2 card-panel red lighten-1 collapsible-body clearfix tepriz">
+                            <volist name='teprize' id='vo' empty="$empty">
+                               <div class="loop valign-wrapper ">
+                                    <img src="http://127.0.0.1/lotteryplatform/Public/images/member/{$vo.pic}" alt="{$vo.name}" class='valign'>
+                                    <span class='prizename valign yellow-text accent-2  center-align'>{$vo.name}</span>
+                                </div>
+                            </volist>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header pic_1  "><i class="mdi-image-filter-drama"></i>一 等 奖<span class="new badge">3</span></div>
+                        <div class="col l12 s12 m12 prize z-depth-2 card-panel red lighten-1 collapsible-body onepriz">
+                            <volist name='oneprize' id='vo' empty="$empty">
+                               <div class="loop valign-wrapper ">
+                                    <img src="http://127.0.0.1/lotteryplatform/Public/images/member/{$vo.pic}" alt="{$vo.name}" class='valign'>
+                                    <span class='prizename valign yellow-text accent-2  center-align'>{$vo.name}</span>
+                                </div>
+                            </volist>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header pic_2 "><i class="mdi-maps-place"></i>二 等 奖<span class="new badge">5</span></div>
+                        <div class="col l12 s12 m12 prize z-depth-2 card-panel red lighten-1 collapsible-body">
+                            <volist name='twoprize' id='vo' empty="$empty">
+                                <div class="loop valign-wrapper ">
+                                    <img src="http://127.0.0.1/lotteryplatform/Public/images/member/{$vo.pic}" alt="{$vo.name}" class='valign'>
+                                    <span class='prizename valign yellow-text accent-2  center-align'>{$vo.name}</span>
+                                </div>
+                            </volist>
+                        </div>
+                    </li>
+                    <li class='li_3'>
+                        <div class="collapsible-header pic_3"><i class="mdi-content-send"></i>三 等 奖<span class="new badge">8</span></a></div>
+                        <div class="col l12 s12 m12 prize z-depth-2 card-panel red lighten-1 collapsible-body clearfix threepic">
+                            <volist name='threeprize' id='vo' empty="$empty">
+                                <div class="loop valign-wrapper ">
+                                    <img src="http://127.0.0.1/lotteryplatform/Public/images/member/{$vo.pic}" alt="{$vo.name}" class='valign'>
+                                    <span class='prizename valign yellow-text accent-2  center-align'>{$vo.name}</span>
+                                </div>
+                            </volist>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class=' red darken-4 popup lightSpeedIn'>
+        <h3 class="yellow-text accent-2 center-align">恭喜获奖</h3>
+        <div class="popup_img"></div>
+        <h4 class='popup_name  yellow-text accent-2 center-align'></h4>
+    </div>
+    
+    <script src="__PUBLIC__/js/hDialog.js"></script>
+    <script src="__PUBLIC__/js/index.js"></script>
+</body>
+
+</html>
